@@ -25,10 +25,10 @@ jobs:
       with:
         command: deb
     - name: push-git-repo
-        run:|
+      run: |
           git config --global user.name "SamuelBuilderBot"
           git config --global user.email "bots-noreply@samuelsharp.com"
 
           git add -A
-          git commit -m "Update test.txt"
+          git commit -m "Build"
           git push
