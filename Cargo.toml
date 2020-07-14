@@ -1,0 +1,11 @@
+[package]
+name = "SamuelVille-Citizen-CLI"
+version = "0.1.0"
+authors = ["Samuel Sharp <samuel@samuelsharp.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "SamuelVille"
+path = "main.rs"
