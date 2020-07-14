@@ -1,0 +1,34 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: rust-cargo
+      uses: actions-rs/cargo@v1.0.1
+      with:
+        command: install
+        args: cargo-deb
+    - name: rust-cargo-build
+      uses: actions-rs/cargo@v1.0.1
+      with:
+        command: build
+        args: --all-targets
+    - name: rust-cargo-build-deb
+      uses: actions-rs/cargo@v1.0.1
+      with:
+        command: deb
+    - name: push-git-repo
+        run:|
+          git config --global user.name "SamuelBuilderBot"
+          git config --global user.email "bots-noreply@samuelsharp.com"
+
+          git add -A
+          git commit -m "Update test.txt"
+          git push
