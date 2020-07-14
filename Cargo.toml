@@ -10,5 +10,5 @@ name = "samuelville"
 path = "main.rs"
 
 [package.metadata.deb]
-name = "SamuelVille Citizen CLI"
+name = "samuelville"
 copyright = "Copyright 2020 Samuel Sharp"
