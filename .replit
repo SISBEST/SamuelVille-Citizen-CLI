@@ -1,2 +1,2 @@
 language="rust"
-run="rustc -o samuelville main.rs"
+run="make run"
