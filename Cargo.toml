@@ -1,7 +1,7 @@
 [package]
 name = "SamuelVille_CLI"
 version = "0.1.0"
-description = "CLI required for all citizens."
+description = "CLI for all citizens."
 authors = ["Samuel Sharp <samuel@samuelsharp.com>"]
 edition = "2018"
 
